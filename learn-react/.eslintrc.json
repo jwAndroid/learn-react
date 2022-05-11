@@ -29,6 +29,7 @@
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-no-undef": "off",
-    "global-require": "off"
+    "global-require": "off",
+    "import/prefer-default-export": "off"
   }
 }

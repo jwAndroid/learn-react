@@ -1,19 +1,21 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
-import { useTheme } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
 
-const Container = styled.div({
+import { lightTheme } from './theme';
+
+const Container = styled.div(({ theme }) => ({
   flex: 1,
-  backgroundColor: 'gray',
-});
+  backgroundColor: theme.color.gray,
+}));
 
 const App = () => {
-  const theme = useTheme();
-
   return (
-    <Container>
-      <div>hello world!</div>
-    </Container>
+    <ThemeProvider theme={lightTheme}>
+      <Container>
+        <div>hello world!!</div>
+      </Container>
+    </ThemeProvider>
   );
 };
 
