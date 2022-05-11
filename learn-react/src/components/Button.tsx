@@ -21,7 +21,7 @@ const StyledButton = styled.button<IStyledButton>(({ backgroundColor }) => ({
 
 interface IButton {
   backgroundColor?: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 const Button: FC<IButton> = ({ onClick, backgroundColor = '#000000' }) => {
