@@ -20,9 +20,11 @@ const Container = styled.div<IContainer>(({ backgroundColor }) => ({
 }));
 
 const ButtonContainer = styled.div({
+  width: '100%',
+  height: 300,
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'center',
+  justifyContent: 'center',
   backgroundColor: 'green',
 });
 
