@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
+import { Button, Text } from './components';
 
 interface IContainer {
   backgroundColor?: string;
@@ -28,28 +29,10 @@ const ButtonContainer = styled.div({
   backgroundColor: 'green',
 });
 
-interface IButton {
-  backgroundColor?: string;
-}
-
-const Button = styled.button<IButton>(({ backgroundColor }) => ({
-  width: 100,
-  height: 100,
-  borderRadius: 20,
-  border: 0,
-  outline: 0,
-  margin: 5,
-  backgroundColor,
-}));
-
-const StyledText = styled.h1({
-  fontSize: 16,
-});
-
 const App = () => {
   const theme = useTheme();
   const [backgroundColor, setBackGroundColor] = useState('');
-  const [text, setText] = useState('');
+  const [text, setText] = useState('색을 선택해 주세요');
 
   const onClickRed = useCallback(() => {
     setBackGroundColor(theme.color.red);
@@ -76,7 +59,9 @@ const App = () => {
         <Button onClick={onClickOrange} backgroundColor={theme.color.orange} />
       </ButtonContainer>
 
-      <StyledText>{text}</StyledText>
+      <Text color={theme.color.black} fontSize={40}>
+        {text}
+      </Text>
     </Container>
   );
 };
