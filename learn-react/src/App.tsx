@@ -20,7 +20,8 @@ const Container = styled.div(() => ({
 const App = () => {
   return (
     <Container>
-      <Text>냥</Text>
+      <Text>사랑해 나리야ㅐ</Text>
+      <Text>사랑해</Text>
     </Container>
   );
 };
